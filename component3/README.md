@@ -30,3 +30,17 @@ Run its tests from the repository root with:
 ```powershell
 python -m unittest component3.tests.test_knowledge_graph
 ```
+
+## Weak-area analysis
+
+The `src/analysis` module uses a learner mastery profile and the curriculum
+knowledge graph to report topics with mastery below `0.5` and their direct
+prerequisites that are below the same threshold or have no mastery record.
+The threshold can be configured. This is a basic analysis only; it does not
+provide recommendations.
+
+Run its tests from the repository root with:
+
+```powershell
+python -m unittest component3.tests.test_weak_area_analysis
+```
