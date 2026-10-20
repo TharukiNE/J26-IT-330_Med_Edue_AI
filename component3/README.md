@@ -16,3 +16,17 @@ Run its tests from the repository root with:
 ```powershell
 python -m unittest component3.tests.test_mastery_profile
 ```
+
+## Curriculum knowledge graph
+
+The `src/knowledge_graph` module stores medical topics as nodes and records
+direct prerequisite relationships. Adding a prerequisite also adds both topics
+to the graph. `get_prerequisites()` returns the direct prerequisites for a
+known topic as a sorted tuple. This is a basic in-memory graph structure, not a
+complete curriculum or recommendation system.
+
+Run its tests from the repository root with:
+
+```powershell
+python -m unittest component3.tests.test_knowledge_graph
+```
